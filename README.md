@@ -19,8 +19,8 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
 4. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
-'''
- python yolo_video.py --image
+```
+$python yolo_video.py --image
     Using TensorFlow backend.
     Image detection mode
     Ignoring remaining command line arguments: ./path2your_video,
@@ -31,7 +31,7 @@ python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
     Colocations handled automatically by placer.
     model_data/yolo.h5 model, anchors, and classes loaded.
     Input image filename:test/dog.jpg
-'''
+```
 
 ### YOLO 사용법
 Use --help to see usage of yolo_video.py:
