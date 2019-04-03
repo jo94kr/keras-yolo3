@@ -18,31 +18,47 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 ```
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
+4. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
+'''
+$python yolo_video.py --image
+    Using TensorFlow backend.
+    Image detection mode
+    Ignoring remaining command line arguments: ./path2your_video,
+    ~~~
+    ~~~
+    ~~~
+    Instructions for updating:
+    Colocations handled automatically by placer.
+    model_data/yolo.h5 model, anchors, and classes loaded.
+    Input image filename:test/dog.jpg
+'''
 
-For Tiny YOLOv3, just do in a similar way, just specify model path and anchor path with `--model model_file` and `--anchors anchor_file`.
-
-### Usage
+### YOLO 사용법
 Use --help to see usage of yolo_video.py:
 ```
-usage: yolo_video.py [-h] [--model MODEL] [--anchors ANCHORS]
+usage: yolo_video.py [-h] [--model ] [--anchors ANCHORS]
                      [--classes CLASSES] [--gpu_num GPU_NUM] [--image]
                      [--input] [--output]
 
 positional arguments:
-  --input        Video input path
-  --output       Video output path
+  --input        동영상 인풋 경로
+  --output       동영상 아웃풋 경로
 
-optional arguments:
+선택 인자:
   -h, --help         show this help message and exit
-  --model MODEL      path to model weight file, default model_data/yolo.h5
-  --anchors ANCHORS  path to anchor definitions, default
+  --model MODEL      모델 weight 파일 경로, 기본 경로는 model_data/yolo.h5
+  --anchors ANCHORS  anchor definitions 경로, 기본 경로는
                      model_data/yolo_anchors.txt
-  --classes CLASSES  path to class definitions, default
+  --classes CLASSES  class definitions 경로, 기본 경로는
                      model_data/coco_classes.txt
-  --gpu_num GPU_NUM  Number of GPU to use, default 1
-  --image            Image detection mode, will ignore all positional arguments
+  --gpu_num GPU_NUM  사용할 GPU의 개수, 기본 1
+  --image            이미지 인식 모드, 다른 인자들을 무시합니다.
 ```
 ---
+
+
+For Tiny YOLOv3, just do in a similar way, just specify model path and anchor path with `--model model_file` and `--anchors anchor_file`.
+
 
 4. MultiGPU usage: use `--gpu_num N` to use N GPUs. It is passed to the [Keras multi_gpu_model()](https://keras.io/utils/#multi_gpu_model).
 
