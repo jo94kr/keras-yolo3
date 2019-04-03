@@ -16,7 +16,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 3. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
 
 ```
-pip install keras tensorflow
+pip install keras tensorflow numpy
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
 4. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
