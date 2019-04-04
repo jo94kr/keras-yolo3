@@ -10,17 +10,18 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 ---
 
 ## 사용 방법
+1. 위의 다운로드 버튼을 눌러서 파일을 다운로드하고 압축을 풀어주세요.
 ![다운로드](./image/1.png)
-![다운로드2](./image.2.png)
-1. YOLO 웹 사이트에서 YOLOv3 weights파일을 다운받습니다. [YOLO website](https://pjreddie.com/media/files/yolov3.weights).
-2. 다운받은 weights 파일을 keras-yolo3 폴더에 넣습니다.
-3. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
+![다운로드2](./image/2.png)
+2. YOLO 웹 사이트에서 YOLOv3 weights파일을 다운받습니다. [YOLO website](https://pjreddie.com/media/files/yolov3.weights).
+3. 다운받은 weights 파일을 keras-yolo3 폴더에 넣습니다.
+4. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
 
 ```
 pip install keras tensorflow numpy Pillow matplotlib
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
-4. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
+5. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
 ```
 $python yolo_video.py --image
     Using TensorFlow backend.
