@@ -8,6 +8,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 
 ---
+※ 파이썬이 설치되어 있어야 합니다. ※
 
 ## 사용 방법
 1. 위의 다운로드 버튼을 눌러서 파일을 다운로드하고 압축을 풀어주세요.
@@ -21,6 +22,10 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 ```
 pip install keras tensorflow numpy Pillow matplotlib
+```
+※ 위 코드에서 에러가 발생하면 파이썬 환경변수 설정이 되어있나 확인해주세요 ※
+
+```
 python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
 5. 변환 작업이 끝나면 아래 명령어를 입력해 YOLO를 사용합니다.
