@@ -32,7 +32,7 @@ $python yolo_video.py --image
     Colocations handled automatically by placer.
     model_data/yolo.h5 model, anchors, and classes loaded.
     Input image filename:test/dog.jpg
-```
+```                      ↑↑↑↑ test/dog.jpg 말고 다른 이미지 파일도 사용해보세요
 
 ### YOLO 사용법
 Use --help to see usage of yolo_video.py:
