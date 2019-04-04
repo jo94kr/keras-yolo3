@@ -11,7 +11,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 ## 사용 방법
 ![다운로드](./image/1.png)
-![](./image.2.png)
+![다운로드2](./image.2.png)
 1. YOLO 웹 사이트에서 YOLOv3 weights파일을 다운받습니다. [YOLO website](https://pjreddie.com/media/files/yolov3.weights).
 2. 다운받은 weights 파일을 keras-yolo3 폴더에 넣습니다.
 3. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
