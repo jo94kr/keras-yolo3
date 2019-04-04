@@ -14,6 +14,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 ![다운로드](./image/1.png)
 ![다운로드2](./image/2.png)
+
 2. YOLO 웹 사이트에서 YOLOv3 weights파일을 다운받습니다. [YOLO website](https://pjreddie.com/media/files/yolov3.weights).
 3. 다운받은 weights 파일을 keras-yolo3 폴더에 넣습니다.
 4. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
@@ -37,6 +38,10 @@ $python yolo_video.py --image
     Input image filename:test/dog.jpg
 ``` 
                      ↑↑↑↑ test/dog.jpg 말고 다른 이미지 파일도 사용해보세요
+
+결과
+
+![결과](./image/3.jpg)
 
 ### YOLO 사용법
 Use --help to see usage of yolo_video.py:
