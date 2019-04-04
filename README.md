@@ -21,7 +21,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 4. keras-yolo3 폴더에서 cmd 창을 실행시키고 아래의 명령어를 입력합니다.
 
 ```
-pip install keras tensorflow numpy Pillow matplotlib
+python -m pip install keras tensorflow numpy Pillow matplotlib
 ```
 ※ 위 코드에서 에러가 발생하면 파이썬 환경변수 설정이 되어있나 확인해주세요 ※
 
