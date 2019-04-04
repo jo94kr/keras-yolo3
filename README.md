@@ -11,6 +11,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 ## 사용 방법
 1. 위의 다운로드 버튼을 눌러서 파일을 다운로드하고 압축을 풀어주세요.
+
 ![다운로드](./image/1.png)
 ![다운로드2](./image/2.png)
 2. YOLO 웹 사이트에서 YOLOv3 weights파일을 다운받습니다. [YOLO website](https://pjreddie.com/media/files/yolov3.weights).
@@ -58,7 +59,7 @@ positional arguments:
   --gpu_num GPU_NUM  사용할 GPU의 개수, 기본 1
   --image            이미지 인식 모드, 다른 인자들을 무시합니다.
 ```
----
+
 
 
 For Tiny YOLOv3, just do in a similar way, just specify model path and anchor path with `--model model_file` and `--anchors anchor_file`.
