@@ -103,11 +103,8 @@ Tiny YOLOv3의 경우 비슷한 방법으로 모델 경로와 앵커 경로를 '
 YOLOv3에 원래의 가중치를 사용하려면 다음 방법대로 진행하세요.
 
 1.`wget https : // pjreddie.com / media / files / darknet53.conv.74`    
-
 2. darknet53.weights로 이름을 변경하세요.     
-
 3.`python convert.py -w darknet53.cfg darknet53.weights model_data / darknet53_weights.h5`     
-
 4. train.py에서 model_data / darknet53_weights.h5를 사용하세요.      
 
 ---
