@@ -101,28 +101,31 @@ Tiny YOLOv3의 경우 비슷한 방법으로 모델 경로와 앵커 경로를 '
 
 
 YOLOv3에 원래의 가중치를 사용하려면 다음 방법대로 진행하세요.
-    1.`wget https : // pjreddie.com / media / files / darknet53.conv.74`
-    2. darknet53.weights로 이름을 변경하세요.
-    3.`python convert.py -w darknet53.cfg darknet53.weights model_data / darknet53_weights.h5`
-    4. train.py에서 model_data / darknet53_weights.h5를 사용하세요.
+   
+1.`wget https : // pjreddie.com / media / files / darknet53.conv.74`
+    
+2. darknet53.weights로 이름을 변경하세요.
+    
+3.`python convert.py -w darknet53.cfg darknet53.weights model_data / darknet53_weights.h5`
+
+4. train.py에서 model_data / darknet53_weights.h5를 사용하세요.
 
 ---
 
-## 알고 있어야 할 몇 가지 문제
+## Some issues to know
+The test environment is
 
-1. 테스트 환경
-    - Python 3.5.2
-    - Keras 2.1.5
-    - tensorflow 1.6.0
+Python 3.5.2
+Keras 2.1.5
+tensorflow 1.6.0
+Default anchors are used. If you use your own anchors, probably some changes are needed.
 
-2. 기본 앵커가 사용됩니다. 자신 만의 앵커를 사용한다면 아마도 약간의 변경이 필요할 것입니다.
+The inference result is not totally the same as Darknet but the difference is small.
 
-3. 추론 결과는 Darknet과 완전히 같지는 않지만 차이는 작다.
+The speed is slower than Darknet. Replacing PIL with opencv may help a little.
 
-4. 속도가 다크 넷보다 느립니다. PIL을 opencv로 바꾸면 조금 도움이 될 것입니다.
+Always load pretrained weights and freeze layers in the first stage of training. Or try Darknet training. It's OK if there is a mismatch warning.
 
-5. 훈련의 첫 번째 단계에서는 항상 예비 가중치를로드하고 레이어를 고정시킵니다. 또는 Darknet 교육을 시도하십시오. 불일치 경고가 있으면 괜찮습니다.
+The training strategy is for reference only. Adjust it according to your dataset and your goal. And add further strategy if needed.
 
-6. 교육 전략은 참고 용입니다. 데이터 세트와 목표에 따라 조정하십시오. 필요한 경우 추가 전략을 추가하십시오.
-
-7. 얼어 붙은 레이어로 교육 과정을 가속화하기 위해 train_bottleneck.py를 사용할 수 있습니다. 동결 된 모델의 병목 현상을 먼저 계산 한 다음 마지막 레이어 만 교육합니다. 따라서 합리적인 시간에 CPU 교육이 가능합니다. 병목 현상에 대한 자세한 내용은 [this] (https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html)를 참조하십시오.
+For speeding up the training process with frozen layers train_bottleneck.py can be used. It will compute the bottleneck features of the frozen model first and then only trains the last layers. This makes training on CPU possible in a reasonable time. See this for more information on bottleneck features.
