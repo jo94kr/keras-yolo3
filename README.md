@@ -75,7 +75,7 @@ positional arguments:
 
 Tiny YOLOv3의 경우 비슷한 방법으로 모델 경로와 앵커 경로를 `--model model_file`와 `--anchors anchor_file`로 지정하면됩니다.  
 
-4. 다중GPU 사용방법 :`--gpu_num N `을 사용하여 N 개의 GPU를 사용합니다. 이것은 [Keras multi_gpu_model()](https://keras.io/utils/#multi_gpu_model)에 상속 됩니다.
+다중GPU 사용방법 :`--gpu_num N `을 사용하여 N 개의 GPU를 사용합니다. 이것은 [Keras multi_gpu_model()](https://keras.io/utils/#multi_gpu_model)에 상속 됩니다.
 
 ## 학습시키기
 
